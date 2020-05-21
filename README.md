@@ -1,2 +1,2 @@
 # mindBrushUp
-Compilation of Basic notes on various topic
+Compilation of Basic notes on various topip
