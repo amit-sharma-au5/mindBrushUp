@@ -38,6 +38,22 @@ var code= "Here is my js variable"
 console.log(code)
 ```
 
+Tables 
 
+|Table |Goes |Here |
+|--- |--- |--- |
+|one |two |Three |
+
+1. List one
+2. Item two
+3. Item three
+    1. List four
+
+~ List four
+
+Horizontal Line
+---
+
+***
 
 
