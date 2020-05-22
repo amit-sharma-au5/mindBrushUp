@@ -1,24 +1,24 @@
-Listing all files and folders
+#### Listing all files and folders
 > **ls**
 
-Present working Directory
+#### Present working Directory
 > **pwd**
 
-Creating Directory
+#### Creating Directory
 > **mkdir dir_name**
 
-Creating File 
+#### Creating File 
 > **touch file_name**
 
-Copy a file 
+#### Copy a file 
 > **cp from_file to_file**
 
-Remove File
+#### Remove File
 > **rm file_name**
 
-Cut and Paste file Or move a file
+#### Cut and Paste file Or move a file
 >  **mv from_file to_file**
 
-Remove Folder
+#### Remove Folder
 > **rm -r folder_name** 
-> Here -r for recurrsive 
+    1.Here -r for recurrsive 
