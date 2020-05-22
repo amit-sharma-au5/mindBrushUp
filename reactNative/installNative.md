@@ -1,6 +1,6 @@
 ## Installing React Native using Expo
 
-### Make your Yiu have Node.js installed
+### Make your You have Node.js installed
 
 ##### Open the node terminal and put the below command for window user 
 > **npm install -global expo-cli**
