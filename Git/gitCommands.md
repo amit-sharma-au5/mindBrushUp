@@ -10,15 +10,15 @@ GIT Basic commands
 > **git add file_name**
 
 #### staging all files 
-> ***git add * ***
+> **(git add *)**
 
 #### commiting files which are added 
-> ***git commit -m 'your_comment'***
+> **git commit -m 'your_comment'**
 
 #### Removing staged 
 > **git store --staged**
 #### Pushing files in Branch
-> ***git push origin branch_name***
+> **git push origin branch_name**
 
 #### Cloaning a git repository 
 > **git clone git_link**
