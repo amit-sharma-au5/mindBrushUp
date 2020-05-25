@@ -26,4 +26,10 @@ GIT Basic commands
 #### Changing Branh in repository
 > **git checkout branch_name**
 
+#### Removing GIT directory
+> **rm -rf .git**
+
+#### GIT change branch
+> **git checkout -b login**
+
 `origin is the reference to our remote Directory`
