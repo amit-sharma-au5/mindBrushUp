@@ -24,11 +24,15 @@
 ` arrow functions are less verbose than traditional functions arrow functions take the this from their surronding`
 
 ### Why is it advised to pass a callback function to setState as opposed to an object?
-` Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state. 
+ Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state. 
  Normally the problem not occur, but if we have multiple datas then this problem might occur that's why we should use function to set state
-`
+
+[Function vs Object](https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1#:~:text=Function%20in%20%60setState%60%20to%20the%20rescue!&text=Passing%20in%20a%20function%20into,your%20component's%20state%20and%20props%20.)
+
+---
 
 ### What is the alternative of binding `this` in the constructor?
+
   
 ### How would you prevent a component from rendering?
      
