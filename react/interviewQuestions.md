@@ -33,36 +33,86 @@
 
 ### What is the alternative of binding `this` in the constructor?
 
-  
+--- 
+
 ### How would you prevent a component from rendering?
+pure Component vs should Component Update
+[Link](https://www.robinwieruch.de/react-prevent-rerender-component#:~:text=React's%20shouldComponentUpdate%20Method&text=As%20you%20can%20see%2C%20the%20shouldComponentUpdate%20class%20method%20has%20access,%2C%20the%20component%20re%2Drenders.)
+
+---
      
 ### What does "shouldComponentUpdate" do and why is it important?
+Use shouldComponentUpdate() to let React know if a component’s output is not affected by the current change in state or props. The default behavior is to re-render on every state change, and in the vast majority of cases you should rely on the default behavior.
+This method only exists as a performance optimization. Do not rely on it to “prevent” a rendering, as this can lead to bugs. Consider using the built-in PureComponent instead of writing shouldComponentUpdate() by hand. PureComponent performs a shallow comparison of props and state, and reduces the chance that you’ll skip a necessary update.
+[Link](https://reactjs.org/docs/react-component.html#shouldcomponentupdate)
+
+---
      
 ### What is JSX?
+[Link](https://reactjs.org/docs/introducing-jsx.html)
+
+---
      
 ### What is equivalent of the following using React.createElement?
-  
+  JSX is not a requirement for using React. Using React without JSX is especially convenient when you don’t want to set up compilation in your build environment.
+  [Link](https://reactjs.org/docs/react-without-jsx.html)
+
+---
+
 ### What is a store in redux?
+A store holds the whole state tree of your application. The only way to change the state inside it is to dispatch an action on it.
+
+A store is not a class. It's just an object with a few methods on it. To create it, pass your root reducing function to createStore.
+[Link](https://redux.js.org/api/store)
      
 ### What is an action?
-  
+An action is a plain object that represents an intention to change the state. Actions are the only way to get data into the store. Any data, whether from UI events, network callbacks, or other sources such as WebSockets needs to eventually be dispatched as actions.
+
+Actions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().
+[Link](https://redux.js.org/glossary#state)
+[Link](https://redux.js.org/basics/actions#:~:text=Actions%20are%20payloads%20of%20information,to%20the%20store%20using%20store.)
+
+--- 
+
 ### What don't you like about React?
-  
+  1. It's just a library, not a framework like Angular.
+
+  2. When the application loads initially, there is no cache of JavaScript in the browser. If the application is    big, the time taken to initially load the application will also be huge.
+  3. Since the application is rendered in the client side, the web crawlers that search engines use won’t be able to index the JavaScript generated content. The search engines will see your application to be blank and then rank you poorly.
+
+---
+
 ### What can you tell me about JSX?
+    JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.
+---
      
 ### Name some popular Flux Libraries
      
 ### What are stateless components?
+stateful components are keeping track of changing data, while stateless components print out what is given to them via props, or they always render the same thing.
+[Link](https://programmingwithmosh.com/javascript/stateful-stateless-components-react/)
      
-### Given the code defined above, can you identify two problems?
+---
       
 ### What is the difference between createElement and cloneElement?
-     
+createElement is what JSX gets Transpiling to create React Elements (object representations of some UI).
+cloneElement is used in order to clone an element and assign it new props
+
+---
+
 ### What's the difference between a "smart" component and a "dumb" component?
+Same as state componenet or stateless Componenet.
+
+---
      
 ### What is the render method for?
+The render() method is the only required method in a class component.
+The render() function should be pure, meaning that it does not modify component state, it returns the same result each time it’s invoked, and it does not directly interact with the browser.
+
+---
      
 ### What are some limitations of things you shouldn't do in the component's render method?
+
      
 ### What's an alternative way to avoid having to bind to this in event callback methods?
      
