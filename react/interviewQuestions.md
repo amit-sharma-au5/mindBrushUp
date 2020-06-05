@@ -112,47 +112,109 @@ The render() function should be pure, meaning that it does not modify component 
 ---
      
 ### What are some limitations of things you shouldn't do in the component's render method?
+You cannot modify the component's state (with setState), nor interact with the browser (do that in componentDidMount). Render should be a pure function.
 
+---
      
 ### What's an alternative way to avoid having to bind to this in event callback methods?
+
      
 ### What is the point of using keys in React?
+It allows for more efficient rendering of lists, so that React can reuse DOM elements without having to destroy + recreate them when lists change (slightly) in the UI.
+[Link](https://github.com/WebPredict/react-interview-questions)
+
+---
      
 ### What's the typical pattern for rendering a list of components from an array of data?
+Call map on an array with an arrow function that executes for each array element, possibly outputting a React component for each.
+[Link](https://github.com/WebPredict/react-interview-questions)
+
+---
      
 ### What is reconciliation in React?
+It's React's process of re-rendering its tree of UI components.
+[Link](https://github.com/WebPredict/react-interview-questions)
+
+---
      
 ### What's the difference between an Element and a Component in React?
-     
+Elements are the fundamental building blocks of React, and describe what you want to see on the screen. They are just simple JS objects with props, key, ref, and type properties, whereas Components have a render method and optionally accept inputs.
+[Link](https://github.com/WebPredict/react-interview-questions)
+
+---
+  
 ### What is the point of shouldComponentUpdate() method?
-     
+    It's used for performance reasons, for example if the implementor of a component knows for sure that a particular property change does not necessitate a re-render, they could return false from this method and skip the re-render.
+[Link](https://github.com/WebPredict/react-interview-questions)
+
 ### What are PropTypes in React?
-     
+They help indicate to React what data types a React component's properties are and should accept.
+[Link](https://github.com/WebPredict/react-interview-questions)
+
 ### What is ReactDOM?
+It's a top-level React API to render a React element into the DOM, via the ReactDOM.render method.
+
+---
      
 ### What are typical middleware choices for handling asynchronous calls in Redux?
-     
+  1. Redux Thunk, 
+  2. Redux Promise, 
+  3. Redux Saga
+
+---
+
 ### What's the typical flow of data like in a React + Redux app?
-     
+Callback from UI component dispatches an action with a payload, which then is intercepted in a reducer, possibly producing a new application state, which is then propagated down through the tree of components in the application from the Redux store.
+
+---
+
 ### What are Pure Components?
-     
+PureComponent is exactly the same as Component except that it handles the shouldComponentUpdate method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component, on the other hand, won’t compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called.
+[Link](https://github.com/sudheerj/reactjs-interview-questions)
+
+---
+
 ### Why should not we update the state directly?
+If you try to update state directly then it won’t re-render the component.
+Instead use setState() method. It schedules an update to a component’s state object. When state changes, the component responds by re-rendering
+[Link](https://github.com/sudheerj/reactjs-interview-questions)
      
+---
+
 ### What is the difference between HTML and React event handling?
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-html-and-react-event-handling)
+
+---
      
 ### How to bind methods or event handlers in JSX callbacks?
+[Link](https://github.com/sudheerj/reactjs-interview-questions#how-to-bind-methods-or-event-handlers-in-jsx-callbacks)
+
      
 ### What are synthetic events in ReactJS?
+SyntheticEvent is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers.
+
+---
+
      
 ### What is Key and benefit of using it in lists?
      
 ### What are forward refs?
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-are-forward-refs)
      
 ### What is the difference between ShadowDOM and VirtualDOM?
+The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-shadow-dom-and-virtual-dom)
      
 ### What are uncontrolled components?
-     
+The Uncontrolled Component are the one that stores its own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML
+For example, in the below UserProfile component, the name input accessed using ref as below,
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-are-uncontrolled-components)
+
+---
+
 ### What is the difference between createElement and cloneElement?
+JSX elements will be transpiled to createElement JS syntax to create React elements which are going to be used for the object representation of UI. Whereas cloneElement is used to clone an element and pass it to new props.
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-createelement-and-cloneelement)
      
 ### What is Lifting State Up in ReactJS?
      
