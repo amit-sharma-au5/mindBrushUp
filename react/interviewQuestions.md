@@ -217,26 +217,65 @@ JSX elements will be transpiled to createElement JS syntax to create React eleme
 [Link](https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-createelement-and-cloneelement)
      
 ### What is Lifting State Up in ReactJS?
-     
+When several components need to share the same changing data then it is recommended to lifting the shared state up to their closest common ancestor. For example, if two child components sharing the same data from its parent then move the state to parent instead of maintaining the local state inn both child components.
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-is-lifting-state-up-in-react)
+
+---
+
 ### What are the different phases of ReactJS component lifecycle?
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-are-the-different-phases-of-component-lifecycle)
      
 ### What are the lifecycle methods of ReactJS?
+-	componentWillMount: Executed before rendering and is used for App level configuration in your root component.
+-	componentDidMount: Executed after first rendering and here all AJAX requests, DOM or state updates, and set up eventListeners should occur.
+-	componentWillReceiveProps: Executed when particular prop updates to trigger state transitions.
+-	shouldComponentUpdate: Determines if the component will be updated or not. By default it returns true. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a rerender if component receives new prop.
+-	componentWillUpdate: Executed before re-rendering the component when there are pros & state changes confirmed by shouldComponentUpdate  which returns true.
+-	componentDidUpdate: Mostly it is used to update the DOM in response to prop or state changes.
+**componentWillUnmount:** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-are-the-different-phases-of-component-lifecycle)
      
 ### What is children prop?
-     
+Children is a prop (this.prop.children) that allow you to pass components as data to other components, just like any other prop you use.
+
+There are a number of methods available in the React API to work with this prop. These include:
+  1. React.Children.map, 
+  2. React.Children.forEach, 
+  3. React.Children.count, 
+  4. React.Children.only, 
+  5. React.Children.toArray.
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-is-children-prop)
+
+--- 
+
 ### How to set state with a dynamic key name?
+If you are using ES6 or the Babel transpiler to transform your JSX code then you can accomplish this with computed property names
+[Link](https://github.com/sudheerj/reactjs-interview-questions#how-to-set-state-with-a-dynamic-key-name)
      
 ### What would be the common mistake of function being called every time the component renders?
-     
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders)
+
+---
+
 ### Why ReactJS uses className over class attribute?
-     
+class is a keyword in javascript and JSX is an extension of javascript. That's the principal reason why React uses className instead of class. 
+
+---
+
 ### Why fragments are better than container divs?
+[Live](https://github.com/sudheerj/reactjs-interview-questions#why-fragments-are-better-than-container-divs)
      
 ### What are error boundaries in ReactJS (16)?
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-are-error-boundaries-in-react-v16)
      
 ### What are the advantages of React over VueJS?
+[Link](https://github.com/sudheerj/reactjs-interview-questions#what-are-the-advantages-of-react-over-vuejs)
+
+---
      
 ### What do these three dots (...) in React do?
+
      
 ### What are advantages of using React Hooks?
      
